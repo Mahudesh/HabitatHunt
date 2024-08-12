@@ -1,0 +1,145 @@
+/* Base styles for LandingPage */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #17d614;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #b754b5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #F5DEB3); /* Apply the gradient background */
+    margin: 0;
+    padding-bottom: 100px; /* Space for footer */
+}
+
+
+.house-image {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 675px; /* Adjust height as needed */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.house-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+}
+
+.house-image-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+    text-align: center; /* Center text */
+    font-size: 2rem; /* Font size */
+    font-weight: 700; /* Bold text */
+    padding: 20px; /* Padding around text */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.8); /* White box shadow */
+    line-height: 1.2; /* Reduce line spacing */
+  
+  
+}
+
+.house-image-text h1 {
+    margin: 0; /* Remove default margin */
+}
+
+.house-image-text p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Smaller font size for the subtitle */
+    font-weight: 400; /* Regular font weight */
+}
+
+.heading {
+    font-size: 2rem;
+    margin: 20px;
+    color: black;
+    text-align: center;
+}
+/* Container for search input and button */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.search-bar {
+    padding: 10px;
+    border: 2px solid black; /* Black border */
+    border-radius: 20px; /* Rounded corners */
+    width: 300px; /* Adjust width as needed */
+    font-size: 1rem; /* Font size */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: black; /* Black background */
+    color: white; /* White font color */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.search-button:hover {
+    background-color: #333; /* Darker b lack on hover */
+    transform: scale(1.05);
+}
+
+.city-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Gap between items */
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for the grid */
+    margin-left: 15%;
+    margin-bottom: 50px; /* Space below grid for footer */
+    
+    
+}
+
+.city-box {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    border: 2px solid wheat; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    
+}
+
+.city-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the city box on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.city-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.city-name {
+    position: absolute;
+    top: 0; /* No space from the top edge */
+    left: 0; /* No space from the left edge */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    z-index: 1; /* Ensure text appears above the image */
+}

@@ -1,0 +1,68 @@
+.sliding-panel {
+    position: fixed;
+    top: 62px; /* Adjust the top height as needed */
+    left: -500px;
+    width: 500px;
+   
+    background: #17d614;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #b754b5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #F5DEB3); /* Apply the gradient background */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sliding-panel.open {
+    left: 0;
+}
+
+.panel-content {
+    padding: 20px;
+    color: black;
+}
+
+.panel-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Times New Roman', serif;
+}
+
+.panel-content ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Different font for the content */
+}
+
+.panel-content li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.panel-content li svg {
+    margin-right: 10px;
+    color: green; /* Color for the tick icon */
+}
+
+.toggle-button {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: black; /* Updated color */
+    color: white; /* Updated text color */
+    border-radius: 50%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: right 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #495057; /* Change color on hover */
+}

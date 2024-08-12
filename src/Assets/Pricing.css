@@ -1,0 +1,129 @@
+/* src/Pricing.css */
+
+.house-image1 {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .house-image-img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .house-image1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity here (0.5 for 50%) */
+    z-index: 1; /* Ensure the overlay is above the image but below the text */
+  }
+  
+  .house-image-texte {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 20px;
+    line-height: 1.2;
+    z-index: 2; /* Ensure text is above the overlay */
+  }
+  
+  .house-image-texte h1 {
+    margin: 0;
+    color: azure;
+  }
+  
+  .house-image-texte p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .pricing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #17d614;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #b754b5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #F5DEB3); /* Apply the gradient background */
+  }
+  
+  
+  .pricing-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap if there are too many for one line */
+    justify-content : center; /* Center cards horizontally */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Adjust padding as needed */
+    max-width: 1200px; /* Optional: limits the max width */
+    padding-left: 10%;
+    cursor: pointer;
+    
+    
+    
+  }
+  
+  .pricing-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px; /* Increased padding for better spacing */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pricing-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-card .price {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pricing-card ul li {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+  
+  .pricing-button {
+    background-color: white;
+    color: black;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pricing-button:hover {
+    background-color: black;
+    color: white;
+  }

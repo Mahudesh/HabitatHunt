@@ -1,0 +1,126 @@
+.sell-with-us-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 102px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid black; /* Thin solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark shadow */
+  background: #17d614;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6fbff, #b754b5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #F5DEB3); /* Apply the gradient background */
+}
+
+
+.sell-with-us-radio-group label {
+  font-size: 1.2rem; /* Adjust as needed */
+}
+.sell-with-us-container p {
+  font-size: 1.2em; /* Adjust as needed */
+}
+
+
+.sell-with-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Remove vertical gap */
+  margin: 0;
+  padding: 0;
+}
+.sell-us-bg{
+  background: #17d614;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6fbff, #b754b5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #F5DEB3); /* Apply the gradient background */
+  
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Control horizontal spacing */
+  width: 100%;
+  margin: 0;
+}
+
+.sell-with-us-form-group {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0; /* Remove bottom margin to reduce space between rows */
+}
+
+.sell-with-us-form-group label {
+  margin-bottom: 5px; /* Adjust if necessary */
+  text-align: left;
+}
+
+.sell-with-us-form-group h3 {
+  font-size: 22px;
+}
+
+.sell-with-us-form-group input[type="text"],
+.sell-with-us-form-group input[type="number"] {
+  padding-left: 10px; /* Adjust the value as needed */
+  border-radius: 15px;
+  padding: 12px 2px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  width: calc(100% - 84px);
+}
+
+.sell-with-us-form-group input[type="radio"] {
+  margin-right: 10px;
+}
+
+.sell-with-us-form-group .sell-with-us-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Reduce space between radio buttons */
+}
+
+.sell-with-us-form-group textarea {
+  border-radius: 15px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: calc(100% - 54px);
+  height: 120px;
+}
+
+.sell-with-us-submit-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sell-with-us-submit-button:hover {
+  background-color: black;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.sell-with-us-file-input {
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sell-with-us-file-input[type="file"]::-webkit-file-upload-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

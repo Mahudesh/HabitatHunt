@@ -1,0 +1,124 @@
+/* Signup.css */
+.signup-body {
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url(./LoginBG.jpg);
+    
+}
+.signup-heading{
+    padding-left: 5%;
+}
+
+.login-box {
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 20px;
+    background-color: rgba(245, 222, 179, 0.7); 
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.8); /* White box shadow */
+    border-radius: 10px;
+    
+}
+
+.login-box h2 {
+    margin: 0 0 20px;
+    color: black;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Times New Roman', serif; /* Set font style to Times New Roman */
+    position: relative; /* Positioning for the underline effect */
+    overflow: hidden; /* Ensure the underline effect stays within the heading */
+}
+
+.login-box h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Adjust gap between text and underline */
+    width: 0; /* Initial width of the underline */
+    height: 2px; /* Thickness of the underline */
+    background: black; /* Color of the underline */
+    transform: translateX(-50%); /* Center the underline under the text */
+    transition: width 0.4s ease-in-out; /* Smooth transition effect */
+}
+
+.login-box h2:hover::after {
+    width: 100%; /* Expand underline to full width on hover */
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+}
+
+.login-box .signup-heading {
+    display: flex;
+    margin-left: 2%;
+    align-items: center; /* Align items vertically */
+}
+
+.login-box .signup-heading .icon {
+    margin-left: 10px; /* Adjust gap between text and icon */
+    font-size: 24px; /* Adjust icon size */
+    margin-top: 5px;
+}
+
+.login-box .signup-heading h2:hover {
+    color: #e0e0e0; /* Light color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+.button-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  
+    gap: 10px; /* Space between button and icon */
+}
+
+.submit {
+    display: flex;
+  
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.submit:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.google-icon {
+    font-size: 30px; /* Increase icon size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}

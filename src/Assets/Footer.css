@@ -1,0 +1,58 @@
+    .footer {
+        background-color: black; /* Background color of the footer */
+        color: white; /* Text color in the footer */
+        padding: 1rem; /* Padding around the content */
+        bottom: 0;
+        width: 100%; /* Full width */
+        display: flex;
+        justify-content: space-between; /* Space between left, center, and right */
+        align-items: center; /* Center items vertically */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    }
+
+    .footer-content {
+        display: flex;
+        width: 100%;
+        max-width: 1200px; /* Adjust based on your layout */
+        margin: 0 auto; /* Center align the content */
+        justify-content: space-between; /* Space out the content items */
+        align-items: center;
+    }
+
+    .footer-content p {
+        margin: 0;
+    }
+
+    .contact-info {
+        margin-right: auto; /* Push the contact info to the left */
+    }
+
+    .copyright-text {
+        text-align: center; /* Center the copyright text */
+        flex: 1; /* Allow it to take up remaining space */
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px; /* Space between icons */
+    }
+
+    .social-icon {
+        width: 30px; /* Size of the icons */
+        height: 30px;
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .social-icon:hover {
+        transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    }
+    .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between the contact icon and text */
+    }
+
+    .contact-i  con {
+        font-size: 24px; /* Adjust icon size if needed */
+    }

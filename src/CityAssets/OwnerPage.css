@@ -1,0 +1,390 @@
+/* Container for the whole page */
+.ownerpage-body {
+    background: #17d614;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b6fbff, #b754b5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #F5DEB3); /* Apply the gradient background */
+    min-height: 100vh; /* Ensure the container covers the full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.ownerpage-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Header styling */
+.ownerpage-header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    background: linear-gradient(135deg, #fff, #f5f5f5);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 7%;
+    
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764);
+}
+
+.menu-icon {
+    margin-right: 20px; /* Space between icon and heading */
+    cursor: pointer;
+}
+
+.ownerpage-header h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Sliding Panel CSS */
+.ownerpage-sliding-panel {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Hidden by default */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.ownerpage-sliding-panel.open {
+    left: 0;
+}
+
+.ownerpage-sliding-panel-content {
+    padding: 20px;
+}
+
+.ownerpage-close-panel-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Filter container */
+.ownerpage-filter-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ownerpage-filter-label {
+    font-size: 1.2rem;
+    color: black;
+    margin-right: 20px;
+    margin-left: 12%;
+}
+
+.ownerpage-filter-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.ownerpage-filter-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    background-color: white; /* White background color */
+    color: black; /* Black font color */
+    font-size: 1rem;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border: solid black;
+}
+
+.ownerpage-filter-button:hover {
+    background-color: black; /* Change background color on hover */
+    color: wheat; /* Change text color on hover */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* White glowing effect */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Grid container for properties */
+.ownerpage-property-grid {
+    display: flex;
+    flex-direction: column; /* One column layout */
+    gap: 20px; /* Space between cards */
+    align-items: center; /* Center align grid items */
+}
+
+/* Individual property card styling */
+.ownerpage-property-card {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Max width for the card */
+    background: #fff; /* White background for the card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Relative positioning for pseudo-elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.ownerpage-property-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+/* Image section of the property card */
+.ownerpage-property-image {
+    flex: 1;
+    max-width: 25%; /* 1/4 of the grid width */
+}
+
+.ownerpage-property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+}
+
+/* Details section of the property card */
+.ownerpage-property-details {
+    flex: 3;
+    padding: 20px;
+}
+
+/* Price styling */
+.ownerpage-price {
+    font-size: 1.5rem;
+    font-weight: bold; /* Bold text */
+    color: #ff5722; /* Accent color for price */
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ownerpage-price-icon {
+    color: black; /* Black color for icon */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* BHK details styling */
+.ownerpage-bhk {
+    font-size: 1.2rem;
+    font-weight: bold; /* Bold text */
+    margin: 0 0 10px;
+}
+
+/* Square feet styling */
+.ownerpage-square-feet {
+    font-size: 1rem;
+    font-weight: bold; /* Bold text */
+    margin: 0 0 10px;
+}
+
+/* Available for styling */
+.ownerpage-available-for {
+    font-size: 1rem;
+    font-weight: bold; /* Bold text */
+    margin: 0 0 20px;
+}
+/* Button styling */
+.ownerpage-view-details {
+    padding: 10px 20px;
+    border: solid 1px black; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    color: white; 
+    font-size: 1rem;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.ownerpage-view-details:hover {
+    background-color: black; /* Black background on hover */
+    color: white; /* White font color on hover */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* White glowing effect */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.ownerpage-grid-button {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between buttons as needed */
+    margin-top: 10px; /* Optional: Add some margin at the top if needed */
+}
+
+/* Dropdown and sub-dropdown styling */
+.ownerpage-filter-container {
+    position: relative;
+}
+
+.ownerpage-more-filters {
+    position: relative;
+    display: inline-block;
+}
+
+.ownerpage-dropdown, .ownerpage-sub-dropdown {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.ownerpage-more-filters:hover .ownerpage-dropdown, .ownerpage-dropdown-item:hover .ownerpage-sub-dropdown {
+    display: block;
+}
+
+.ownerpage-dropdown-item, .ownerpage-sub-dropdown div {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.ownerpage-dropdown-item:hover, .ownerpage-sub-dropdown div:hover {
+    background-color: #ddd;
+}
+
+/* Floating message */
+.ownerpage-message-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.ownerpage-message-icon {
+    margin-right: 10px;
+}
+.remove-property {
+    background-color: red; /* Red background */
+    color: white;          /* White text */
+    border: none;          /* Remove default border */
+    border-radius: 7px;   /* Optional: Rounded corners */
+    padding: 10px 20px;   /* Padding inside the button */
+    font-size: 14px;       /* Font size */
+    cursor: pointer;       /* Pointer cursor on hover */
+    display: flex;         /* Use flexbox for alignment */
+    align-items: center;   /* Center items vertically */
+    gap: 10px;             /* Space between icon and text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.remove-property:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+.remove-icon {
+    color: white;           /* White icon color */
+    font-size: 20px;        /* Increase icon size */
+}
+.confirm-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.confirm-popup-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.confirm-yes, .confirm-no {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.confirm-yes {
+    background-color: green;
+}
+
+.confirm-no {
+    background-color: red;
+}
+/* Styles for the container */
+.property-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between heading and button */
+    padding: 0 140px; /* Optional padding */
+}
+
+/* Styles for the container */
+.property-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    padding: 0 200px; /* Optional padding */
+}
+
+/* Styles for the heading */
+.property-heading {
+    margin: 0;
+    flex: 1; /* Take up available space */
+   margin-left: 10%;
+}
+
+/* Styles for the button */
+.add-property-button {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 7px;   /* Optional: Rounded corners */   
+    padding: 10px 20px;   /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    gap: 8px; /* Space between icon and text */
+    font-size: 17px;       /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+}
+.add-property-button:hover{
+    background-color: darkgreen;
+}
+
+/* Styles for the home icon */
+.home-icon {
+    font-size: 22px; /* Adjust icon size */
+}
+
+/* Styles for the button text */
+.add-property-text {
+    margin: 0; /* Remove default margin */
+}

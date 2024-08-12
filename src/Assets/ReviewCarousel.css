@@ -1,0 +1,136 @@
+/* Review.css */
+
+/* Center the entire container on the page */
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 20px;
+  }
+  
+  /* Container for the carousel */
+  .carousel-container {
+    position: relative;
+    width: 50%;
+    max-width: 500px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-height: 390px;
+  }
+  
+  /* Carousel and items */
+  .carousel {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #cac7c7, #e9e7e8);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .carousel-item:hover {
+    transform: scale(1);
+    background: linear-gradient(135deg, #eceef1, #7f8180);
+  }
+  
+  /* Customer image styling */
+  .customer-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #f0f0ee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .customer-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Review content styling */
+  .review-content {
+    background: #f3f6f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    height:120px;
+  }
+  
+  .review-content h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .review-content p {
+    color: #666;
+    font-style: italic;
+    line-height: 1.5; /* Improve readability */
+  }
+  
+  /* Star rating styles */
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.3s ease;
+  }
+  
+  .star.filled {
+    color: #e64225;
+  }
+  
+  /* Carousel navigation buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-button:active {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(0.9);
+  }
+  
+  .carousel-button.prev {
+    left: 20px;
+  }
+  
+  .carousel-button.next {
+    right: 20px;
+  }
