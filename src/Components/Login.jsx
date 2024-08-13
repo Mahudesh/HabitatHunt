@@ -34,13 +34,14 @@ const Login = () => {
             const response = await axios.post('http://localhost:8080/api/auth/login', formData);
             console.log("User logged in", response.data);
 
-            if (formData.emailId === 'admin@gmail.com' && formData.password === 'admin123') {
+            if (response.data.message === "Admin") {
                 navigate('/admin'); // Navigate to the admin page
             } else {
                 // Call handleLogin to update auth context
-                handleLogin(formData.emailId);
+                
+                handleLogin(formData.emailId, response.data.userId);    
     
-                navigate('/'); // Redirect to user home page after login
+                navigate(`/${response.data.userId}`); 
             }
         } catch (error) {
             console.error("There was an error logging in", error);

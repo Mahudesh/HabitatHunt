@@ -70,7 +70,9 @@ const AdminDashboard = () => {
           </div>
         </aside>
         <main className="admin-main-content">
+        <div className='admin-heading'>
           <h1>Admin Dashboard</h1>
+          </div>
           <div className="admin-stats-container">
             <div className="admin-stats-card">
               <h3>{users}+ Users</h3>

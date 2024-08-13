@@ -32,16 +32,16 @@ import AdminOwners from './Admin/AdminOwners';
 const AuthContext = createContext();
 
 const App = () => {
-  const [auth, setAuth] = useState({ isAuthenticated: false, email: '' });
+  const [auth, setAuth] = useState({ isAuthenticated: false, email: '', userId: null });
 
-  const handleLogin = (email) => {
-    setAuth({ isAuthenticated: true, email });
+  const handleLogin = (email, userId) => {
+    setAuth({ isAuthenticated: true, email, userId });
   };
 
   const handleLogout = () => {
-    setAuth({ isAuthenticated: false, email: '' });
+    setAuth({ isAuthenticated: false, email: '', userId: null });
   };
-
+  
   return (
     <div style={{fontFamily: 'Arial, sans-serif'}}>
       <AuthContext.Provider value={{ auth, handleLogin, handleLogout }}>
@@ -49,11 +49,12 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<CBEPage/>} />
+              <Route path="/:userId" element={<CBEPage />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/forgot-password" element={<ForgotPassword/>} />
               <Route path="/SignupPage" element={<Signup />} />
               <Route path="/Ownerlogin" element={<AdminLogin />} />
-              <Route path='/ContactForm' element={<ContactForm/>}/>
+              <Route path='/ContactForm/:userId' element={<ContactForm/>}/>
               <Route path="/AboutUsPage" element={<AboutUsPage />} />
               <Route path='/Pricing' element={<Pricing/>}/>
               <Route path='/Payment' element={<Payment/>}/>

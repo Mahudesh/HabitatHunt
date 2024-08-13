@@ -35,7 +35,7 @@ const Navbar = () => {
                             <Link to='/' className='navbar-link'>Home</Link>
                             <Link to='/AboutUsPage' className='navbar-link'>About</Link>
                             <Link to='/Pricing' className='navbar-link'>Pricing</Link>
-                            <Link to='/ContactForm' className='navbar-link'>Contact</Link>
+                            <Link to={`/ContactForm/${auth.userId}`} className='navbar-link'>Contact</Link> {/* Pass the userId in the URL */}
                         </>
                     )
                 )}

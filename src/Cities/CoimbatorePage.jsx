@@ -26,7 +26,7 @@ const CoimbatorePage = () => {
     const { properties, setProperties } = useProperties(); 
     const { cityId } = useParams(); 
 
-    useEffect(() => {
+    useEffect(() => {   
         const fetchProperties = async () => {
             try {
                 const response = await axios.get(`http://localhost:8080/api/properties/city/getall/${cityId}`);

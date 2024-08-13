@@ -16,6 +16,7 @@ const ContactUs = () => {
     useEffect(() => {
         const inputs = document.querySelectorAll(`.${styles.input}`);
 
+
         const focusFunc = (event) => {
             let parent = event.target.parentNode;
             parent.classList.add(styles.inputContainerFocus);
@@ -84,8 +85,9 @@ const ContactUs = () => {
                 </div>
 
                 <div className={styles.contactForm}>
-                    <span className={`${styles.circle} ${styles.circleOne}`}></span>
-                    <span className={`${styles.circle} ${styles.circleTwo}`}></span>
+                <span className={`${styles.circle} ${styles.circleOne}`}></span>
+<span className={`${styles.circle} ${styles.circleTwo}`}></span>
+
 
                     <form className={styles.contactusform} action="index.html" autoComplete="off">
                         <h3 className={styles.title}>Contact us</h3>
@@ -105,6 +107,7 @@ const ContactUs = () => {
                             <span className={styles.span}>Phone</span>
                         </div>
                         <div className={`${styles.inputContainer} ${styles.textarea}`}>
+
                             <textarea name="message" className={styles.input} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                             <label className={styles.textareaLabel}>Message</label>
                             <span className={styles.span}>Message</span>
